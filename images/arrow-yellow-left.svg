@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FC111CB3-6928-4AF4-9B07-CCE1CFC350AF</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="GreenLine-New:-Главная:-Мобайл" transform="translate(-16.000000, -1413.000000)" stroke="#FDD13C" stroke-width="2">
+            <g id="Group-52" transform="translate(-146.000000, 580.000000)">
+                <g id="Group-45" transform="translate(162.000000, 826.000000)">
+                    <g id="arrow-left" transform="translate(1.000000, 8.000000)">
+                        <line x1="14" y1="5.25" x2="0" y2="5.25" id="Shape"></line>
+                        <polyline id="Shape" points="5.25 10.5 0 5.25 5.25 0"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

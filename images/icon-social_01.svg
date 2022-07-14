@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-social_01</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GreenLine-New:-Главная:-Десктоп" transform="translate(-1320.000000, -11829.000000)" fill="#FFFFFF">
+            <g id="Group-26" transform="translate(0.000000, 10958.000000)">
+                <g id="social" transform="translate(1136.000000, 871.000000)">
+                    <g id="soc-icon-1" transform="translate(184.000000, 0.000000)">
+                        <path d="M28,11.6315238 C28,9.62579365 26.3944,8 24.4133333,8 L7.58666667,8 C5.6056,8 4,9.62579365 4,11.6315238 L4,21.3684762 C4,23.3742063 5.6056,25 7.58666667,25 L24.4133333,25 C26.3944,25 28,23.3742063 28,21.3684762 L28,11.6315238 Z M13.6,20.6083333 L13.6,11.4620635 L20.4538667,16.0350635 L13.6,20.6083333 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

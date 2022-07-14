@@ -1,0 +1,48 @@
+<svg width="202" height="408" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="410" width="204" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <defs>
+   <style type="text/css">
+    <![CDATA[
+    .fil0 {fill:#FEFEFE}
+   ]]>
+   </style>
+  </defs>
+  <defs>
+   <style type="text/css">
+    <![CDATA[
+    .fil0 {fill:#FEFEFE}
+   ]]>
+   </style>
+  </defs>
+  <defs>
+   <style type="text/css">
+    <![CDATA[
+    .fil0 {fill:#FEFEFE}
+   ]]>
+   </style>
+  </defs>
+  <defs>
+   <style type="text/css">
+    <![CDATA[
+    .fil0 {fill:#FEFEFE}
+   ]]>
+   </style>
+  </defs>
+  <g stroke="null" id="svg_54">
+   <g stroke="null" transform="matrix(0.7466826006307137,0,0,0.7466826006307137,-87706041.7374321,-60487244.53842987) " id="svg_50">
+    <metadata stroke="null" transform="translate(2.0603885650634766,0) translate(2.0603885650634766,0) translate(2.0603885650634766,0) translate(2.0603885650634766,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-2.0603883266448975,0) translate(-404.4723205566406,317.489013671875) translate(117461328,0) translate(0,81007640) " id="svg_51"/>
+    <path stroke="null" id="svg_53" d="m117461115.16535,81008083.489014c26,-1 46,-24 44,-51c-1,-27 -24,-47 -50,-46c-26,1 -46,24 -44,51c1,27 24,48 50,46zm71,215c7,-10 11,-16 18,-27c-32,-36 -28,-77 -53,-114c-9,-13 -17,-25 -26,-38c-10,-14 -26,-22 -44,-21c-6,0 -12,2 -19,5c-40,20 -69,58 -101,95c1,37 3,59 4,97c14,-3 21,0 36,-3c0,-28 0,-55 0,-83c0,0 25,-26 25,-26c-10,71 -19,131 -29,202c-12,39 -24,77 -36,116c16,4 32,8 48,13c0,0 40,-112 40,-111c9,-27 18,-53 28,-80c10,23 19,46 29,69c7,41 14,81 22,122c16,-2 33,-4 49,-6c-7,-47 -14,-94 -21,-141c-14,-32 -28,-65 -41,-97c3,-22 6,-43 10,-65c11,36 25,74 59,93l2,0z" class="fil0"/>
+   </g>
+  </g>
+ </g>
+</svg>
