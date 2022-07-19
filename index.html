@@ -1993,18 +1993,7 @@
                         <div class="quarter-note__caption">Tokyo</div>
                         <div class="quarter-note__text">активный квартал</div>
                         <div class="quarter-note__line"></div>
-                        <div class="quarter-note-info">
-                          <div class="bird-note-info bird-note-info--top">
-                            <div
-                              class="bird-note-info__div bird-note-info__div--full"
-                            >
-                              <div class="note-info__note">
-                                Ожидаются новые очереди
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="quarter-note__line"></div>
+                       
                         <div class="quarter-note-info">
                           <div class="w-embed w-script">
                             <!DOCTYPE html>
@@ -2729,6 +2718,14 @@
                         <div class="quarter-note__text">активный квартал</div>
                         <div class="quarter-note__line"></div>
                         <div class="quarter-note-info">
+                          <div class="bird-note-info bird-note-info--top">
+                            <div class="bird-note-info__div">
+                              <div class="note-info__note">Класс</div>
+                            </div>
+                            <div class="bird-note-info__div">
+                              <div class="note-info__text">Cтандарт</div>
+                            </div>
+                          </div>
                           <div class="w-embed w-script">
                             <!DOCTYPE html>
                             <html>
@@ -4931,12 +4928,12 @@
                       Aqua
                     </div>
                     <div class="s7-tab-link-txt s7-tab-txt-active">
-                      В реализации
+                      В продаже
                     </div>
                   </div>
                   <div class="s7-tab-link-div">
                     <div class="s7-tab-link-title">Aqua</div>
-                    <div class="s7-tab-link-txt">В реализации</div>
+                    <div class="s7-tab-link-txt">В продаже</div>
                   </div>
                 </a>
                 <a
@@ -5070,7 +5067,6 @@
                 <div data-w-tab="Tab 7" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">в реализации</div>
                       <div class="s7-slide-title">Aqua</div>
                       <div class="s7-slide-subtitle">
                         Квартал насыщенной жизни
@@ -5080,7 +5076,7 @@
                         энергией и наслаждения комфортабельной средой для
                         процветающей и успешной жизни.
                       </div>
-                      <div class="s7-param-div">
+                      <!-- <div class="s7-param-div">
                         <div class="s7-param-block">
                           <div class="s7-param-1">Класс</div>
                           <div class="s7-param-2">Бизнес</div>
@@ -5089,10 +5085,89 @@
                           <div class="s7-param-1">Стоимость</div>
                           <div class="s7-param-2">от 15 620 480 тг</div>
                         </div>
-                        <div class="s7-param-block">
-                          <div class="s7-param-1">Стоимость за кв/м</div>
-                          <div class="s7-param-2">580 320 тг</div>
-                        </div>
+                       
+                      </div> -->
+                      <div class="s7-param-div w-embed w-script">
+                        <!DOCTYPE html>
+                        <html>
+                          <head>
+                            <title></title>
+                            <meta charset="utf-8" />
+                          </head>
+                          <body>
+                            <div
+                              id="aqua-min-price--kv"
+                              style="width: 100%"
+                            >
+                              <div class="s7-param-block">
+                                <div class="s7-param-1">Класс</div>
+                                <div class="s7-param-2">Бизнес</div>
+                              </div>
+                              <div class="s7-param-block">
+                                <div class="s7-param-1">Стоимость</div>
+                                <div class="s7-param-2">
+                                  от {{
+                                  String(minPrice).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,
+                                  '$1 ') }} тг
+                                </div>
+                              </div>
+                              <!-- Цена за кв/м <div class="s7-param-block">
+            <div class="s7-param-1">Стоимость за кв/м</div>
+            <div class="s7-param-2">
+              от {{
+              String(minPriceM).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,
+              '$1 ') }} тг
+            </div>
+          </div> -->
+                            </div>
+                            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+                            <script>
+                              new Vue({
+                                el: "#aqua-min-price--kv",
+                                data: {
+                                  minPrice: "",
+                                  minPriceM: "",
+                                },
+                                mounted() {
+                                  axios
+                                    .get(
+                                      "https://offersapi.bi.group/groups/c68f11e7-48d1-11eb-a83d-00155d106579"
+                                    )
+                                    .then((response) => {
+                                      let allSquaresPrices = [];
+                                      let allSquaresPricesM = [];
+                                      this.responseBack = response;
+                                      response.data.map((item) => {
+                                        for (
+                                          let i = 0;
+                                          i < item.squares.length;
+                                          i++
+                                        ) {
+                                          allSquaresPrices.push(
+                                            item.squares[i].price
+                                          );
+                                          allSquaresPricesM.push(
+                                            item.squares[i].priceM
+                                          );
+                                        }
+                                      });
+                                      this.minPrice = Math.min.apply(
+                                        null,
+                                        allSquaresPrices
+                                      );
+                                      this.minPriceM = Math.min.apply(
+                                        null,
+                                        allSquaresPricesM
+                                      );
+                                    })
+                                    .catch(function (error) {});
+                                },
+                              });
+                            </script>
+                          </body>
+                        </html>
                       </div>
                       <div class="green-btn-div">
                         <a
@@ -5166,7 +5241,6 @@
                 <div data-w-tab="Tab 5" class="w-tab-pane w--tab-active">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">Квартиры в наличии</div>
                       <div class="s7-slide-title">Aura</div>
                       <div class="s7-slide-subtitle">
                         Квартал чистой энергии
@@ -5359,7 +5433,6 @@
                 <div data-w-tab="Tab 1" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">Квартиры в наличии</div>
                       <div class="s7-slide-title">TERRA</div>
                       <div class="s7-slide-subtitle">
                         Квартал, где зарождается счастье
@@ -5540,7 +5613,6 @@
                 <div data-w-tab="Tab 3" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">Квартиры в наличии</div>
                       <div class="s7-slide-title">Headliner</div>
                       <div class="s7-slide-subtitle">
                         Квартал для тех, кто выбирает лучшее
@@ -5720,7 +5792,6 @@
                 <div data-w-tab="Tab 2" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">Квартиры в наличии</div>
                       <div class="s7-slide-title">Asyl Mura</div>
                       <div class="s7-slide-subtitle">
                         Квартал, где ценят традиции и наследие
@@ -5901,7 +5972,6 @@
                 <div data-w-tab="Tab 6" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">Квартиры в наличии</div>
                       <div class="s7-slide-title">Ару Қала</div>
                       <div class="s7-slide-subtitle">
                         Квартал для тех, кто ценит комфорт
@@ -6075,17 +6145,15 @@
                 <div data-w-tab="Tab 9" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">
-                        Квартиры в наличии
-                      </div>
                       <div class="s7-slide-title">Vita</div>
                       <div class="s7-slide-subtitle">
-                        Квартал ценителей востока
+                        Квартал счастливой жизни
                       </div>
                       <div>
-                        Создан в лучших традициях мастеров востока, и сочетает в
-                        себе изысканность дизайна, а также высокое качество
-                        строительства
+                        Здесь царит легкая и свободная атмосфера, 
+которую дополняют лаконичная архитектура, 
+с приятными оттенками фасада и большой двор, 
+где дети смогут весело провести время
                       </div>
                       <div class="s7-param-div w-embed w-script">
                         <!DOCTYPE html>
@@ -6096,26 +6164,36 @@
                           </head>
                           <body>
                             <div
-                              id="tokyo-min-price--kv"
+                              id="vita-min-price--kv"
                               style="width: 100%"
                             >
                               <div class="s7-param-block">
                                 <div class="s7-param-1">Класс</div>
-                                <div class="s7-param-2">Комфорт</div>
+                                <div class="s7-param-2">Стандарт</div>
                               </div>
                               <div class="s7-param-block">
                                 <div class="s7-param-1">Стоимость</div>
                                 <div class="s7-param-2">
-                                  от {{String(minPrice).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,'$1') }} тг
+                                  от {{
+                                  String(minPrice).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,
+                                  '$1 ') }} тг
                                 </div>
                               </div>
+                              <!-- Цена за кв/м <div class="s7-param-block">
+            <div class="s7-param-1">Стоимость за кв/м</div>
+            <div class="s7-param-2">
+              от {{
+              String(minPriceM).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,
+              '$1 ') }} тг
+            </div>
+          </div> -->
                             </div>
                             <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
                             <script>
                               new Vue({
-                                el: "#tokyo-min-price--kv",
+                                el: "#vita-min-price--kv",
                                 data: {
                                   minPrice: "",
                                   minPriceM: "",
@@ -6194,15 +6272,8 @@
                         <div class="w-slide">
                           <div class="s7-slide-img-div">
                             <img
-                              src="images/1-kv-tokyo.jpg"
+                              src="images/1-vita.jpg"
                               loading="lazy"
-                              sizes="(max-width: 479px) 100vw, (max-width: 767px) 93vw, 61vw"
-                              srcset="
-                                images/1-kv-tokyo-p-500.jpeg   500w,
-                                images/1-kv-tokyo-p-800.jpeg   800w,
-                                images/1-kv-tokyo-p-1080.jpeg 1080w,
-                                images/1-kv-tokyo.jpg         1240w
-                              "
                               alt=""
                               class="s7-slide-img"
                             />
@@ -6211,13 +6282,8 @@
                         <div class="w-slide">
                           <div class="s7-slide-img-div">
                             <img
-                              src="images/2-kv-tokyo.jpg"
+                              src="images/2-vita.jpg"
                               loading="lazy"
-                              sizes="(max-width: 479px) 100vw, (max-width: 767px) 93vw, 61vw"
-                              srcset="
-                                images/2-kv-tokyo-p-1080.jpeg 1080w,
-                                images/2-kv-tokyo.jpg         1240w
-                              "
                               alt=""
                               class="s7-slide-img"
                             />
@@ -6226,14 +6292,8 @@
                         <div class="w-slide">
                           <div class="s7-slide-img-div">
                             <img
-                              src="images/3-kv-tokyo.jpg"
+                              src="images/3-vita.jpg"
                               loading="lazy"
-                              sizes="(max-width: 479px) 100vw, (max-width: 767px) 93vw, 61vw"
-                              srcset="
-                                images/3-kv-tokyo-p-500.jpeg   500w,
-                                images/3-kv-tokyo-p-1080.jpeg 1080w,
-                                images/3-kv-tokyo.jpg         1240w
-                              "
                               alt=""
                               class="s7-slide-img"
                             />
@@ -6263,9 +6323,7 @@
                 <div data-w-tab="Tab 8" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">
-                        Квартиры в наличии
-                      </div>
+                      
                       <div class="s7-slide-title">Tokyo</div>
                       <div class="s7-slide-subtitle">
                         Квартал ценителей востока
@@ -6478,7 +6536,7 @@
                   class="s7-tab-link-2 w-inline-block w-tab-link w--current"
                 >
                   <div class="s7-tab-link-div s7-tab-active">
-                    <div class="s7-tab-link-title s7-tab-title-active">
+                    <div class="s7-tab-link-title">
                       prima
                     </div>
                     <div class="s7-tab-link-txt s7-tab-txt-active">
@@ -6586,7 +6644,7 @@
                 <!--</div>-->
                 <!--</div>-->
                 <!--</div>-->
-                <div data-w-tab="Tab 6" class="w-tab-pane w--tab-active">
+                <!-- <div data-w-tab="Tab 6" class="w-tab-pane">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
                       <div class="section-pref color">ПЕРСПЕКТИВНЫЙ</div>
@@ -6664,7 +6722,7 @@
                       <div class="slider-dots-nav w-slider-nav w-round"></div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -6729,9 +6787,6 @@
                 <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
                   <div class="s7-slider-div">
                     <div class="s7-txt-div">
-                      <div class="section-pref color">
-                        Реализовано и распродано
-                      </div>
                       <div class="s7-slide-title">Зеленый квартал</div>
                       <div class="s7-slide-subtitle">
                         Квартал ценителей природы

@@ -6832,8 +6832,8 @@ body {
 }
 
 .s3-map-icon.icon-green-aura {
-  right: 59%;
-  bottom: 60%;
+  right: 50%;
+  bottom: 70%;
 }
 
 .s3-map-icon.icon-green-freedom {
@@ -6867,8 +6867,8 @@ body {
 }
 
 .s3-map-icon.icon-yellow-aqua {
-  right: 55%;
-  bottom: 40%;
+  right: 25%;
+  bottom: 54%;
 }
 
 .s3-map-icon.icon-green-gr-terra {
@@ -7072,8 +7072,8 @@ body {
 }
 
 .map-hover-quarter-note.map-hover-quarter-note--aura {
-  right: 38%;
-  bottom: 29%;
+  right: 30%;
+  bottom: 45%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7247,14 +7247,14 @@ body {
 
 .map-hover-quarter.map-hover-quarter--aur {
   position: absolute;
-  left: 27%;
-  top: 25.5%;
+  left: 11%;
+  top: 24%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 27.5%;
-  height: 14%;
+  width: 43%;
+  height: 23%;
 }
 
 .map-hover-quarter.map-hover-quarte--prima {
@@ -7285,13 +7285,13 @@ body {
 .map-hover-quarter.map-hover-quarte--modex {
   position: absolute;
   left: 66%;
-  top: 46%;
+  top: 51%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 20.5%;
-  height: 20%;
+  width: 14.5%;
+  height: 15%;
 }
 
 .map-hover-quarter.map-hover-quarte--seoul {
@@ -7910,8 +7910,8 @@ body {
 
 .s3-map-obj {
   position: absolute;
-  right: 80%;
-  bottom: 48%;
+  right: 85%;
+  bottom: 51%;
   z-index: 4;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7993,7 +7993,8 @@ body {
 }
 
 .s3-map-obj.s3-map-obj--school {
-  right: 62%;
+  right: 61%;
+  bottom: 52%;
 }
 
 .s3-map-obj.s3-map-obj--binom {
@@ -8061,13 +8062,13 @@ body {
 }
 
 .s3-map-obj.s3-map-obj--bc {
-  right: 39%;
-  top: 15%;
+  right: 42%;
+    top: 17%;
 }
 
 .s3-map-obj.s3-map-obj--2 {
-  right: 38%;
-  bottom: 70%;
+  right: 40%;
+  bottom: 73%;
 }
 
 .s3-map-obj.s3-map-obj--shop {
